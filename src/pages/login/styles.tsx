@@ -25,12 +25,12 @@ export const style = StyleSheet.create({
         paddingTop:40
     },
     logo:{
-        width:80,
-        height:80
+        width:200,
+        height:200
     },
     text:{
         fontWeight:"bold",
-        marginTop:40,
+        marginTop:10,
         fontSize:18
     },
     titleInput:{
@@ -75,7 +75,7 @@ export const style = StyleSheet.create({
     },
     textButton:{
         fontSize:16,
-        color:"#FFFF",
+        color:"#FFF",
         fontWeight:"bold"
     },
     textBottom:{

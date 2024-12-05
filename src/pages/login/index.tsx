@@ -9,20 +9,22 @@ import {
 } from 'react-native';
 
 import { themas } from "../../global/themes";
-import Logo from "../../assets/logo.png"
 import {style} from "./styles"
 import {MaterialIcons} from "@expo/vector-icons"
+
+import Logo from "../../assets/logo.png"
+import DaUmHelpLogo from "../../assets/DaUmHelpLogo.png"
 
 export default function login (){
     return(
         <View style = {style.container}>
             <View style = {style.boxTop}>
                 <Image 
-                    source={Logo}
+                    source={DaUmHelpLogo}
                     style = {style.logo}
                     resizeMode="contain"
                 />
-                <Text style = {style.text}>Bem vindo de volta!</Text>
+                <Text style = {style.text}>Bem vindo!</Text>
             </View>
 
             <View style = {style.boxMid}>
