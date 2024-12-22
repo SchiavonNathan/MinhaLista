@@ -1,21 +1,35 @@
-import React from "react";
-
+import React, { useState } from "react";
 import {
     Text,
     View,
     Image,
     TextInput,
-    TouchableOpacity
+    TouchableOpacity,
+    Button
 } from 'react-native';
-
 import { themas } from "../../global/themes";
 import {style} from "./styles"
 import {MaterialIcons} from "@expo/vector-icons"
-
 import Logo from "../../assets/logo.png"
 import DaUmHelpLogo from "../../assets/DaUmHelpLogo.png"
+import axios from 'axios'
+
 
 export default function login (){
+
+    const apiUrl = "http://localhost:3000"
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+    
+    const handleLogin = async () => {
+        const user = {email, password}
+
+        const response = await axios.post(`${apiUrl}/user`,user)
+        .then(res => {console.log(res.data)})
+        .catch(err => {console.error(err)})
+    }
+
+
     return(
         <View style = {style.container}>
             <View style = {style.boxTop}>
@@ -32,6 +46,7 @@ export default function login (){
                 <View style = {style.boxInput}>
                     <TextInput
                         style = {style.input}
+                        onChangeText={newEmail => setEmail(newEmail)}
                     />
                     <MaterialIcons
                         name="email"
@@ -43,6 +58,7 @@ export default function login (){
                 <View style = {style.boxInput}>
                     <TextInput
                         style = {style.input}
+                        onChangeText={newPassword => setPassword(newPassword)}
                     />
                     <MaterialIcons
                         name="remove-red-eye"
@@ -53,7 +69,7 @@ export default function login (){
             </View>
 
             <View style = {style.boxBottom}>
-                <TouchableOpacity style={style.button}>
+                <TouchableOpacity style={style.button} onPress={handleLogin}>
                     <Text style={style.textButton}>Entrar</Text>    
                 </TouchableOpacity> 
             </View>
