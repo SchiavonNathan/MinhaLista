@@ -14,7 +14,7 @@ import DaUmHelpLogo from "../../assets/DaUmHelpLogo.png"
 import axios from 'axios'
 
 
-export default function Login (){
+export default function Cadastro (){
 
     const apiUrl = "http://localhost:3000"
     const [email, setEmail] = useState('')
@@ -22,7 +22,6 @@ export default function Login (){
     
     const handleLogin = async () => {
         const user = {email, password}
-
 
         const response = await axios.post(`${apiUrl}/user`,user)
         .then(res => {console.log(res.data)})
