@@ -5,21 +5,25 @@ import {
     Image,
     TextInput,
     TouchableOpacity,
-    Button
+    SafeAreaView
 } from 'react-native';
 import { themas } from "../../global/themes";
 import {style} from "./styles"
 import {MaterialIcons} from "@expo/vector-icons"
 import DaUmHelpLogo from "../../assets/DaUmHelpLogo.png"
 import axios from 'axios'
+import { useNavigation, NavigationProp } from '@react-navigation/native'
 
 
 export default function Login (){
 
+    const navigation = useNavigation<NavigationProp<any>>()
+
     const apiUrl = "http://localhost:3000"
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
-    
+    const [showPassword, setShowPassword] = useState(false);
+
     const handleLogin = async () => {
         const user = {email, password}
 
@@ -27,7 +31,17 @@ export default function Login (){
         const response = await axios.post(`${apiUrl}/user`,user)
         .then(res => {console.log(res.data)})
         .catch(err => {console.error(err)})
+
+        navigation.navigate("BottomRoutes")
     }
+
+    const cadastroNavigation = async () => {
+        navigation.navigate("Cadastro")
+    }
+
+    const toggleShowPassword = () => {
+        setShowPassword(!showPassword);
+    };
 
 
     return(
@@ -55,8 +69,11 @@ export default function Login (){
                     />
                 </View>
                 <Text style = {style.titleInput}>Senha</Text>
+                
+                <SafeAreaView>
                 <View style = {style.boxInput}>
                     <TextInput
+                        secureTextEntry={!showPassword}
                         style = {style.input}
                         onChangeText={newPassword => setPassword(newPassword)}
                     />
@@ -64,8 +81,10 @@ export default function Login (){
                         name="remove-red-eye"
                         size={20}
                         color={themas.colors.gray}
+                        onPress={toggleShowPassword}
                     />
                 </View>
+                </SafeAreaView>
             </View>
 
             <View style = {style.boxBottom}>
@@ -74,7 +93,13 @@ export default function Login (){
                 </TouchableOpacity> 
             </View>
 
-            <Text style={style.textBottom}>Não tem conta? <Text style={{color:themas.colors.primary}}>Crie agora!</Text></Text>
+            <Text style={style.textBottom}>Não tem conta? 
+                <TouchableOpacity onPress={cadastroNavigation}>
+                    <Text style={{color: themas.colors.primary}}>
+                        Crie agora!
+                    </Text>
+                </TouchableOpacity>
+            </Text>
 
         </View>
     )
