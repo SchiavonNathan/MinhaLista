@@ -19,7 +19,7 @@ export default function Login (){
 
     const navigation = useNavigation<NavigationProp<any>>()
 
-    const apiUrl = "http://localhost:3000"
+    const apiUrl = "http://10.0.2.2:3000"
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [showPassword, setShowPassword] = useState(false);
