@@ -13,6 +13,7 @@ import {MaterialIcons} from "@expo/vector-icons"
 import DaUmHelpLogo from "../../assets/DaUmHelpLogo.png"
 import axios from 'axios'
 import { useNavigation, NavigationProp } from '@react-navigation/native'
+import { Switch } from "react-native-gesture-handler";
 
 
 export default function Cadastro (){
@@ -87,6 +88,13 @@ export default function Cadastro (){
                     />
                 </View>
                 </SafeAreaView>
+                <View style = {style.boxSwitch}>
+                <Text style = {style.titleInput}>Freelancer</Text>
+                    <Switch
+                        value={isFreelancer}
+                        onValueChange={(value) => setisFreelancer(value)}
+                    ></Switch>
+                </View>
             </View>
 
             <View style = {style.boxBottom}>
@@ -95,12 +103,10 @@ export default function Cadastro (){
                 </TouchableOpacity> 
             </View>
 
-            <Text style={style.textBottom}>Já possui conta? 
-                <TouchableOpacity onPress={loginNavigation}>
-                    <Text style={{color: themas.colors.primary}}>
+            <Text style={style.textBottom}>Já possui conta?
+                <Text onPress={loginNavigation} style={[style.textBottom, { color: themas.colors.blackYellow}]}>
                         Entre agora!
-                     </Text>
-                </TouchableOpacity>
+                </Text>
             </Text>
             
         </View>

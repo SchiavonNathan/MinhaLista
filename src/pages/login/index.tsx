@@ -13,6 +13,7 @@ import {MaterialIcons} from "@expo/vector-icons"
 import DaUmHelpLogo from "../../assets/DaUmHelpLogo.png"
 import axios from 'axios'
 import { useNavigation, NavigationProp } from '@react-navigation/native'
+import { Switch } from "react-native-gesture-handler";
 
 
 export default function Login (){
@@ -94,11 +95,9 @@ export default function Login (){
             </View>
 
             <Text style={style.textBottom}>Não tem conta? 
-                <TouchableOpacity onPress={cadastroNavigation}>
-                    <Text style={{color: themas.colors.primary}}>
+                    <Text onPress={cadastroNavigation} style={{color: themas.colors.blackYellow}}>
                         Crie agora!
                     </Text>
-                </TouchableOpacity>
             </Text>
 
         </View>

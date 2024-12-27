@@ -22,7 +22,7 @@ export const style = StyleSheet.create({
         height:Dimensions.get('window').height/3,
         width:"100%",
         alignItems:"center",
-        paddingTop:40
+        paddingTop:100
     },
     logo:{
         width:200,
@@ -81,6 +81,11 @@ export const style = StyleSheet.create({
     textBottom:{
         fontSize:16,
         color: themas.colors.gray
+    },
+    boxSwitch:{
+        height:Dimensions.get('window').height/9,
+        width:"100%",
+        alignItems:"center",
+        justifyContent:"center",
     }
-    
 })
