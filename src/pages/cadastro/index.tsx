@@ -33,6 +33,7 @@ export default function Cadastro (){
         try {
             const response = await axios.post(`${apiUrl}/user`,user);
             console.log(response.data);
+            navigation.navigate("Login")
     
           } catch (err) {
             console.error("Erro ao cadastrar o usuário:", err);

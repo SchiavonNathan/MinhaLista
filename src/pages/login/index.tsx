@@ -28,12 +28,14 @@ export default function Login (){
     const handleLogin = async () => {
         const user = {email, password}
 
-
-        const response = await axios.post(`${apiUrl}/user`,user)
-        .then(res => {console.log(res.data)})
-        .catch(err => {console.error(err)})
-
-        navigation.navigate("BottomRoutes")
+        try {
+            const response = await axios.post(`${apiUrl}/user/login`,user)
+            console.log(response.data);
+            navigation.navigate("BottomRoutes")
+    
+          } catch (err) {
+            console.error("Erro ao fazer login:", err);
+          }
     }
 
     const cadastroNavigation = async () => {
