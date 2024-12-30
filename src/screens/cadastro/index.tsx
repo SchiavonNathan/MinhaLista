@@ -28,6 +28,7 @@ export default function Cadastro (){
     const [showPassword, setShowPassword] = useState(false);
     
     const handleCadastro = async () => {
+
         const user = {name, email, password, isFreelancer}
 
         try {

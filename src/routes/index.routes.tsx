@@ -1,8 +1,8 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
-import Login from "../pages/login";
+import Login from "../screens/login";
 import BottomRoutes from "./bottom.routes";
-import Cadastro from "../pages/cadastro";
+import Cadastro from "../screens/cadastro";
 
 export default function Routes(){
     const Stack = createStackNavigator()
