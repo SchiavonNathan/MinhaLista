@@ -5,7 +5,8 @@ import {
     Image,
     TextInput,
     TouchableOpacity,
-    SafeAreaView
+    SafeAreaView,
+    Alert
 } from 'react-native';
 import { themas } from "../../global/themes";
 import {style} from "./styles"
@@ -29,15 +30,24 @@ export default function Cadastro (){
     
     const handleCadastro = async () => {
 
+        const isValidEmail =/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
         const user = {name, email, password, isFreelancer}
 
         try {
+
+            if(!isValidEmail.test(email)){
+                Alert.alert("Use um Email valido!")
+            }
+            else{
             const response = await axios.post(`${apiUrl}/user`,user);
             console.log(response.data);
+            Alert.alert("Cadastro realizado!")
             navigation.navigate("Login")
+            }
     
           } catch (err) {
             console.error("Erro ao cadastrar o usuário:", err);
+            Alert.alert("Erro ao cadastrar usuário!")
           }
     }
 

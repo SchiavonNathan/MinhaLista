@@ -5,15 +5,16 @@ import {
     Image,
     TextInput,
     TouchableOpacity,
-    SafeAreaView
+    SafeAreaView,
+    Alert
 } from 'react-native';
 import { themas } from "../../global/themes";
-import {style} from "./styles"
 import {MaterialIcons} from "@expo/vector-icons"
+import {style} from "./styles"
 import DaUmHelpLogo from "../../assets/DaUmHelpLogo.png"
 import axios from 'axios'
 import { useNavigation, NavigationProp } from '@react-navigation/native'
-import { Switch } from "react-native-gesture-handler";
+
 
 
 export default function Login (){
@@ -34,7 +35,8 @@ export default function Login (){
             navigation.navigate("BottomRoutes")
     
           } catch (err) {
-            console.error("Erro ao fazer login:", err);
+            console.error("Erro ao fazer login:", err)
+            Alert.alert("Erro ao fazer login!")
           }
     }
 
