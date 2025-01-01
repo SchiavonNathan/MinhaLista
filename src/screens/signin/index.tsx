@@ -106,6 +106,7 @@ export default function Cadastro (){
                         value={isFreelancer}
                         onValueChange={(value) => setisFreelancer(value)}
                     ></Switch>
+                   
                 </View>
             </View>
 

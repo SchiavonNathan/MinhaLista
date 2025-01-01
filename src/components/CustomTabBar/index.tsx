@@ -11,7 +11,7 @@ export default ({state,navigation}) => {
 
     return (
         <View style={style.container}>
-            <TouchableOpacity style={style.item}>
+            <TouchableOpacity style={style.item} onPress={() => navigateScreen("Home")}>
                 <AntDesign name="home" size={24} color="black" />
             </TouchableOpacity>
             <TouchableOpacity style={style.item}>
