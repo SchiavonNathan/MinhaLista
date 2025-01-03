@@ -12,13 +12,13 @@ export default ({state,navigation}) => {
     return (
         <View style={style.container}>
             <TouchableOpacity style={style.item} onPress={() => navigateScreen("Home")}>
-                <AntDesign name="home" size={24} color="black" />
+                <AntDesign name="home" size={24} color="white" />
             </TouchableOpacity>
             <TouchableOpacity style={style.item}>
-                <AntDesign name="plus" size={24} color="black" />
+                <AntDesign name="plus" size={24} color="white" />
             </TouchableOpacity>
-            <TouchableOpacity style={style.item} onPress={() => navigateScreen("Profile")}>
-                <AntDesign name="user" size={24} color="black" />
+            <TouchableOpacity style={style.item} onPress={() => navigateScreen("Configuration")}>
+                <AntDesign name="user" size={24} color="white" />
             </TouchableOpacity>
         </View>
     )
