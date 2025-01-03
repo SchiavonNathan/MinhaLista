@@ -34,7 +34,6 @@ export default function Cadastro (){
         const user = {name, email, password, isFreelancer}
 
         try {
-
             if(!isValidEmail.test(email)){
                 Alert.alert("Use um Email valido!")
             }

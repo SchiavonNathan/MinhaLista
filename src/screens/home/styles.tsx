@@ -3,85 +3,34 @@ import { themas } from "../../global/themes";
 
 export const style = StyleSheet.create({
     container:{
-        padding:15,
-        paddingTop:20,
+        paddingTop:30,
         alignItems:"center",
         justifyContent:"center"
     },
     boxTop:{
-        height:50,
+        height:70,
         width:"100%",
-        backgroundColor:"blue"
-        
-    },
-    boxMid:{
-        height:Dimensions.get('window').height/4,
-        width:"100%",
-        paddingHorizontal: 37
-    },
-    boxBottom:{
-        height:Dimensions.get('window').height/3,
-        width:"100%",
-        alignItems:"center",
-        paddingTop:40
-    },
-    logo:{
-        width:200,
-        height:200
+        paddingHorizontal: 15
     },
     text:{
-        fontWeight:"bold",
+        fontWeight: "bold",
         marginTop:10,
-        fontSize:18
+        fontSize:30
     },
-    titleInput:{
-        marginLeft: 5,
-        marginTop: 20,
-        color: themas.colors.gray
-    },
-    boxInput:{
-        width:"100%",
-        height:40,
-        borderWidth:1,
-        borderRadius:40,
-        marginTop:10,
-        flexDirection: "row",
-        alignItems: "center",
-        paddingHorizontal: 7,
-        backgroundColor: themas.colors.lightGray,
-        borderColor: themas.colors.lightGray
-    },
-    input:{
-        height: "100%",
-        width: "90%",
-        borderRadius:40,
-        paddingLeft:5
-    },
-    button:{
-        width: 230,
-        height: 50,
+    itemFlatlist:{
+        display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        backgroundColor: themas.colors.primary,
-        borderRadius: 40,
-        shadowColor: "#000",
-        shadowOffset: {
-            width: 0,
-            height: 12,
-        },
-        shadowOpacity: 0.58,
-        shadowRadius: 16.00,
-
-        elevation: 24,
+        flexDirection: "column",
+        width: 100,
+        height:100,
+        borderRadius: 15,
+        borderWidth: 1,
+        borderColor: "gray",
     },
-    textButton:{
-        fontSize:16,
-        color:"#FFF",
-        fontWeight:"bold"
-    },
-    textBottom:{
-        fontSize:16,
-        color: themas.colors.gray
+    boxMid:{
+        backgroundColor:"#e0e0e0",
+        width:"100%",
+        height:600
     }
-    
 })

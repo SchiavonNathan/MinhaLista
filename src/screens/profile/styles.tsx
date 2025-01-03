@@ -26,6 +26,11 @@ export const style = StyleSheet.create({
         width:"100%",
         paddingHorizontal:25
     },
+    boxBottom:{
+        paddingTop: 20,
+        width:"100%",
+        alignItems:"center"
+    },
     textBox:{
         width:"100%",
         height:45,
@@ -39,8 +44,8 @@ export const style = StyleSheet.create({
         alignItems: "center",
     },
     button:{
-        width: 230,
-        height: 50,
+        width: 150,
+        height: 40,
         justifyContent: "center",
         alignItems: "center",
         backgroundColor: themas.colors.gray,

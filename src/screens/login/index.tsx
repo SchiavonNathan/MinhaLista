@@ -14,8 +14,7 @@ import {style} from "./styles"
 import DaUmHelpLogo from "../../assets/DaUmHelpLogo.png"
 import axios from 'axios'
 import { useNavigation, NavigationProp } from '@react-navigation/native'
-
-
+import * as SecureStore from 'expo-secure-store';
 
 export default function Login (){
 
@@ -26,12 +25,19 @@ export default function Login (){
     const [password, setPassword] = useState('')
     const [showPassword, setShowPassword] = useState(false);
 
+    const saveToken = async (key: string) => {
+        const tokenValue = key;
+        await SecureStore.setItemAsync('token', tokenValue);
+        console.log("Token salvo com sucesso!");
+    };
+
     const handleLogin = async () => {
         const user = {email, password}
 
         try {
             const response = await axios.post(`${apiUrl}/user/login`,user)
             console.log(response.data);
+            saveToken(email)
             navigation.navigate("BottomRoutes")
     
           } catch (err) {
