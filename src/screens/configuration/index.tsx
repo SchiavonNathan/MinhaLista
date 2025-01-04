@@ -37,7 +37,7 @@ export default function Configuration() {
                 />
                 <View style={{paddingLeft:15}}>
                     <Text style = {style.name}>Nathan Schiavon</Text>
-                    <Text style = {style.tittle}>Developer</Text>
+                    <Text style = {style.tittle}>User</Text>
                 </View>
             </View>
             <View style={style.boxMid}>
