@@ -51,7 +51,7 @@ export default function Profile() {
                 resizeMode="contain"
             />
             <Text style = {style.name}>Nathan Schiavon</Text>
-            <Text style = {style.tittle}>Developer</Text>
+            <Text style = {style.tittle}>User</Text>
             <View style = {style.boxTop}>
                 <Text>Nome</Text>
                 <View style = {style.textBox}>
