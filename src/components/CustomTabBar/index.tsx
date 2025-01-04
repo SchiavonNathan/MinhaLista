@@ -14,7 +14,7 @@ export default ({state,navigation}) => {
             <TouchableOpacity style={style.item} onPress={() => navigateScreen("Home")}>
                 <AntDesign name="home" size={24} color="white" />
             </TouchableOpacity>
-            <TouchableOpacity style={style.item}>
+            <TouchableOpacity style={style.item} onPress={() => navigateScreen("Service")}>
                 <AntDesign name="plus" size={24} color="white" />
             </TouchableOpacity>
             <TouchableOpacity style={style.item} onPress={() => navigateScreen("Configuration")}>

@@ -7,7 +7,7 @@ export const style = StyleSheet.create({
         flexDirection: "row",
         height: 50,
         justifyContent: "space-around",
-        backgroundColor:"rgba(128, 128, 128, 0.8)",
+        backgroundColor:"black",
         
     },
     item:{
