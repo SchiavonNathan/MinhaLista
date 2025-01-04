@@ -70,6 +70,18 @@ export default function Cadastro (){
             </View>
             
             <View style = {style.boxMid}>
+                <Text style = {style.titleInput}>Nome</Text>
+                <View style = {style.boxInput}>
+                    <TextInput
+                        style = {style.input}
+                        onChangeText={newName => setName(newName)}
+                    />
+                    <MaterialIcons
+                        name="people"
+                        size={20}
+                        color={themas.colors.gray}
+                    />
+                </View>
                 <Text style = {style.titleInput}>Email</Text>
                 <View style = {style.boxInput}>
                     <TextInput
@@ -99,6 +111,7 @@ export default function Cadastro (){
                     />
                 </View>
                 </SafeAreaView>
+                {/*
                 <View style = {style.boxSwitch}>
                 <Text style = {style.titleInput}>Freelancer</Text>
                     <Switch
@@ -107,6 +120,8 @@ export default function Cadastro (){
                     ></Switch>
                    
                 </View>
+                */}
+                
             </View>
 
             <View style = {style.boxBottom}>

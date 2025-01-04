@@ -8,15 +8,15 @@ export const style = StyleSheet.create({
         justifyContent:"center"
     },
     boxTop:{
-        height:Dimensions.get('window').height/3,
+        height:170,
         width:"100%",
         alignItems:"center",
         justifyContent:"center"
     },
     boxMid:{
-        height:Dimensions.get('window').height/4,
+        height:180,
         width:"100%",
-        paddingHorizontal: 37
+        paddingHorizontal: 37,
     },
     boxBottom:{
         height:Dimensions.get('window').height/3,
@@ -26,7 +26,7 @@ export const style = StyleSheet.create({
     },
     logo:{
         width:200,
-        height:200
+        height:170
     },
     text:{
         fontWeight:"bold",
@@ -35,7 +35,7 @@ export const style = StyleSheet.create({
     },
     titleInput:{
         marginLeft: 5,
-        marginTop: 20,
+        marginTop: 15,
         color: themas.colors.gray
     },
     boxInput:{
